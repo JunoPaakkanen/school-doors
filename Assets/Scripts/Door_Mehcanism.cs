@@ -1,28 +1,27 @@
 using UnityEngine;
 
-public class Door_Mehcanism : MonoBehaviour
+public class Door : MonoBehaviour
 {
-    public GameObject door; // Reference to the door object
+    private bool isOpen = false;
 
-    void OnTriggerEnter(Collider other)
+    // Door rotation settings
+    public float openAngle = 90f; // The angle to open the door
+    public float doorSpeed = 2f;   // Speed of opening
+
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        // Smoothly open the door if it is set to open
+        if (isOpen)
         {
-            // Option 1: Disable door collider to allow passage
-            door.GetComponent<Collider>().enabled = false;
-
-            // Option 2: Trigger door open animation (if animated)
-            // door.GetComponent<Animator>().SetTrigger("Open");
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, openAngle, 0), Time.deltaTime * doorSpeed);
         }
     }
 
-    void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isOpen)
         {
-            // Re-enable the door collider once the player leaves
-            door.GetComponent<Collider>().enabled = true;
+            isOpen = true; // Open the door when the player enters the trigger
         }
     }
 }
-
