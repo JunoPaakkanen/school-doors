@@ -31,7 +31,7 @@ public class Next_Room_Loader : MonoBehaviour
             {
                 // Select a random room from the available rooms list
                 int randomIndex = Random.Range(0, availableRooms.Count);
-                string selectedRoom = availableRooms[randomIndex];
+                string selectedRoom = "TestScene";          //availableRooms[randomIndex];
                 Debug.Log("Attempting to load scene: " + selectedRoom);
 
                 // Load the selected room and remove it from the list

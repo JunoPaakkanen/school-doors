@@ -41,7 +41,9 @@ public class ElectricTorchOnOff : MonoBehaviour
 	{
 		GameObject _scriptControllerEmissionFade = GameObject.Find("default");
 
-		if (_scriptControllerEmissionFade != null)
+        _flashLightOn = true;
+
+        if (_scriptControllerEmissionFade != null)
 		{
 			_emissionMaterialFade = _scriptControllerEmissionFade.GetComponent<EmissionMaterialGlassTorchFadeOut>();
 		}
