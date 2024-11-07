@@ -8,8 +8,8 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Apply damage to the player (e.g., 20 damage)
-            playerHealthSystem.TakeDamage(20);
+            // Apply damage to the player
+            playerHealthSystem.TakeDamage(100);
         }
     }
 }
