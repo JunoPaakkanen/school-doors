@@ -243,7 +243,12 @@ PrefabInstance:
     - target: {fileID: 6948777154601327789, guid: ca9ab02d299714ec09719e716f2d7c9d,
         type: 3}
       propertyPath: m_Name
-      value: Player with_flashlight 1
+      value: Player with_flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948777154601327789, guid: ca9ab02d299714ec09719e716f2d7c9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7775922126761705293, guid: ca9ab02d299714ec09719e716f2d7c9d,
         type: 3}
@@ -302,7 +307,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3329599617921752463}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6948777154601327789, guid: ca9ab02d299714ec09719e716f2d7c9d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6564603741350979750}
   m_SourcePrefab: {fileID: 100100000, guid: ca9ab02d299714ec09719e716f2d7c9d, type: 3}
 --- !u!4 &466300766231263499 stripped
 Transform:
@@ -310,3 +319,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8396565009518835186}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506897600094447967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6948777154601327789, guid: ca9ab02d299714ec09719e716f2d7c9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8396565009518835186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6564603741350979750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506897600094447967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77deef01e45e44cea8d29c6cc53fa647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: -4520

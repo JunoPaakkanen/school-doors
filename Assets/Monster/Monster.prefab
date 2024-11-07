@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6164342690199738710}
   - component: {fileID: 1151799576117356389}
   - component: {fileID: 4913134012989038829}
+  - component: {fileID: 2585857117358507521}
+  - component: {fileID: 8660512044120903779}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Enemy
@@ -192,3 +194,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2585857117358507521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709456755295639909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d06ab6a5a2894f90a13ef4ae87be4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthSystem: {fileID: -6564603741350979750, guid: a4d7bf6203f9241a0a764c7ee976d8a3,
+    type: 3}
+--- !u!65 &8660512044120903779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709456755295639909}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.39, y: 2.76, z: 0.95}
+  m_Center: {x: 0, y: 0, z: 0}
