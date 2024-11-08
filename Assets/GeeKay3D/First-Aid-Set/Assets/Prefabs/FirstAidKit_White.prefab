@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
+  playerHealthSystem: {fileID: -6564603741350979750, guid: a4d7bf6203f9241a0a764c7ee976d8a3,
+    type: 3}

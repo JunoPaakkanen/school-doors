@@ -6,6 +6,18 @@ public class DestroyItem : MonoBehaviour
     public string targetTag = "Player";
     public HealthSystem playerHealthSystem;
 
+
+    private void Start()
+    {
+        if (playerHealthSystem == null)
+        {
+            playerHealthSystem = GameObject.FindWithTag(targetTag)?.GetComponent<HealthSystem>();
+            if (playerHealthSystem == null)
+                Debug.LogError("HealthSystem component not found on Player.");
+        }
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object that collided with the health pack has the "Player" tag

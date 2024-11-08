@@ -339,3 +339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: -4520
+  hasHealthPack: 1
+  healthPackLightController: {fileID: -2619335336999816166, guid: f63e65675a6e1494f940b88d554ba138,
+    type: 3}
+  gameOverUI: {fileID: 0}
+  gameOverController: {fileID: 0}

@@ -4,7 +4,10 @@ public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    private bool hasHealthPack = false;
+    public bool hasHealthPack = false;
+
+    public HealthPackLightController healthPackLightController;
+
 
     // Reference to Game Over UI
     public GameObject gameOverUI;  // Panel that will be activated when the player dies
@@ -50,10 +53,27 @@ public class HealthSystem : MonoBehaviour
         Time.timeScale = 0f;  // Pauses the game
     }
 
-
     public void PickupHealthPack()
     {
         hasHealthPack = true;
+        Debug.Log("Health increased.");
+
+        // Enable the health pack indicator (cylinder) on the flashlight
+        if (healthPackLightController != null)
+        {
+            healthPackLightController.EnableIndicator();
+        }
+    }
+
+    public void UseHealthPack()
+    {
+        hasHealthPack = false;
+
+        // Optionally disable the indicator when health pack is used
+        if (healthPackLightController != null)
+        {
+            healthPackLightController.DisableIndicator();
+        }
     }
 
     public bool HasHealthPack()
